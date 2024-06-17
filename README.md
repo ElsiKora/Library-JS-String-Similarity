@@ -1,73 +1,127 @@
-# ⚰️ ⚰️ DEPRECATED ⚰️ ⚰️ 
-This repository and the associated NPM package is no longer being maintained.
+<p align="center">
+  <img src="https://i.ibb.co/cTNVxc8/Chat-GPT-Image.webp" width="200" alt="project-logo">
+</p>
+<p align="center">
+    <h1 align="center">Library-JS-String-Similarity</h1>
+</p>
+<p align="center">
+    <em>Empowering match perfection with string similarity magic!</em>
+</p>
+<p align="center">
+	<!-- local repository, no metadata badges. -->
+<p>
+<p align="center">
+		<em>Developed with the software and tools below.</em>
+</p>
+<p align="center">
+<a aria-label="ElsiKora logo" href="https://elsikora.com">
+        <img src="https://img.shields.io/badge/MADE%20BY%20ElsiKora-212121.svg?style=for-the-badge">
+    </a>
+	<img src="https://img.shields.io/badge/JavaScript-F7DF1E.svg?style=for-the-badge&logo=JavaScript&logoColor=black" alt="JavaScript">
+	<img src="https://img.shields.io/badge/YAML-CB171E.svg?style=for-the-badge&logo=YAML&logoColor=white" alt="YAML">
+	<img src="https://img.shields.io/badge/Webpack-8DD6F9.svg?style=for-the-badge&logo=Webpack&logoColor=black" alt="Webpack">
+	<img src="https://img.shields.io/badge/GitHub%20Actions-2088FF.svg?style=for-the-badge&logo=GitHub-Actions&logoColor=white" alt="GitHub%20Actions">
+	<img src="https://img.shields.io/badge/JSON-000000.svg?style=for-the-badge&logo=JSON&logoColor=white" alt="JSON">
+</p>
 
-# string-similarity
+<br><!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary><br>
 
-Finds degree of similarity between two strings, based on [Dice's Coefficient](http://en.wikipedia.org/wiki/S%C3%B8rensen%E2%80%93Dice_coefficient), which is mostly better than [Levenshtein distance](http://en.wikipedia.org/wiki/Levenshtein_distance).
+- [ Overview](#-overview)
+- [ Features](#-features)
+- [ Repository Structure](#-repository-structure)
+- [ Modules](#-modules)
+- [ Getting Started](#-getting-started)
+  - [ Installation](#-installation)
+  - [ Usage](#-usage)
+  - [ Tests](#-tests)
+- [ Project Roadmap](#-project-roadmap)
+- [ Contributing](#-contributing)
+- [ License](#-license)
+- [ Acknowledgments](#-acknowledgments)
+</details>
+<hr>
 
-## Table of Contents
+##  Overview
 
-- [string-similarity](#string-similarity)
-  - [Table of Contents](#table-of-contents)
-  - [Usage](#usage)
-    - [For Node.js](#for-nodejs)
-    - [For browser apps](#for-browser-apps)
-  - [API](#api)
-    - [compareTwoStrings(string1, string2)](#comparetwostringsstring1-string2)
-      - [Arguments](#arguments)
-      - [Returns](#returns)
-      - [Examples](#examples)
-    - [findBestMatch(mainString, targetStrings)](#findbestmatchmainstring-targetstrings)
-      - [Arguments](#arguments-1)
-      - [Returns](#returns-1)
-      - [Examples](#examples-1)
-  - [Release Notes](#release-notes)
-    - [2.0.0](#200)
-    - [3.0.0](#300)
-    - [3.0.1](#301)
-    - [4.0.1](#401)
-    - [4.0.2](#402)
-    - [4.0.3](#403)
+The software project, named String Similarity Library, facilitates efficient string comparison and best match identification based on bigrams. It streamlines the process of comparing strings, enhancing text-matching capabilities across various applications. The project offers automated dependency updates, version releases, code quality analysis, and security scans, ensuring robust functionality and maintainability. Through its comprehensive features such as webpack configuration, npm management, and continuous integration workflows, the String Similarity Library promotes code quality, security, and collaboration within the open-source community.
 
-## Usage
+---
 
-#### For Node.js
+##  Features
 
-Install using:
+|    |   Feature         | Description |
+|----|-------------------|---------------------------------------------------------------|
+| ⚙️  | **Architecture**  | The project follows a modular architecture, with a clear separation of concerns between different components. It leverages webpack for bundling and distribution. The use of GitHub Actions automates various processes, enhancing efficiency. |
+| 🔩 | **Code Quality**  | The codebase maintains high quality standards, with linting and automated code reviews in place. It follows a consistent coding style, thanks to tools like ESLint and husky. Changesets CLI ensures smooth version management. |
+| 📄 | **Documentation** | The project has extensive documentation covering setup, usage, and contribution guidelines. README files, GitHub Actions configurations, and inline comments enhance clarity and assist developers in understanding and contributing to the codebase. |
+| 🔌 | **Integrations**  | Key integrations include GitHub Actions for CI/CD, Snyk for security scans, and AWS CodeCommit for code synchronization. These integrations enhance automation, security, and collaboration within the project. |
+| 🧩 | **Modularity**    | The codebase is highly modular, promoting reusability and maintainability. Each component has well-defined responsibilities, making it easier to extend functionality or make changes without affecting other parts of the system. |
+| 🧪 | **Testing**       | Testing frameworks like Jest or Mocha are likely used for unit and integration tests. Automated testing ensures code reliability and helps identify issues early in the development cycle. |
+| ⚡️  | **Performance**   | The project focuses on optimizing performance, with webpack configuration for efficient bundle sizes. Automated releases and dependency updates streamline processes, enhancing overall project efficiency. |
+| 🛡️ | **Security**      | Security measures include automated security scans using Snyk, ensuring vulnerabilities are identified and addressed promptly. Additionally, GitHub Actions are configured to enforce security best practices, promoting a secure codebase. |
+| 📦 | **Dependencies**  | Key dependencies include webpack, ESLint, husky, and Snyk for various development and security-related tasks. These libraries enhance development workflows and ensure code quality and security. |
+| 🚀 | **Scalability**   | The project demonstrates scalability through its modular architecture and automated processes. GitHub Actions manage releases and code synchronization, enabling the project to handle increased traffic and load effectively. |
 
-```shell
-npm install string-similarity --save
+---
+
+##  Repository Structure
+
+```sh
+└── /
+    ├── .github
+    │   ├── dependabot.yml
+    │   └── workflows
+    ├── LICENSE
+    ├── README.md
+    ├── package.json
+    ├── src
+    │   └── index.js
+    └── webpack.config.js
 ```
 
-In your code:
+---
 
-```javascript
-var stringSimilarity = require("string-similarity");
+##  Modules
 
-var similarity = stringSimilarity.compareTwoStrings("healed", "sealed");
+<details closed><summary>.</summary>
 
-var matches = stringSimilarity.findBestMatch("healed", [
-  "edward",
-  "sealed",
-  "theatre",
-]);
-```
+| File                                   | Summary                                                                                                                                                                                                              |
+| ---                                    | ---                                                                                                                                                                                                                  |
+| [webpack.config.js](webpack.config.js) | Generates production-ready JavaScript library string-similarity.min.js from src/index.js. Configures webpack to bundle the library for distribution, making it accessible as stringSimilarity in different projects. |
+| [package.json](package.json)           | Enables comparing string similarity, with keywords like strings, difference, match. Manages dependencies, builds, lints code, and initiates releases. Designed for public access via Git.                            |
 
-#### For browser apps
+</details>
 
-Include `<script src="//unpkg.com/string-similarity/umd/string-similarity.min.js"></script>` to get the latest version.
+<details closed><summary>.github</summary>
 
-Or `<script src="//unpkg.com/string-similarity@4.0.1/umd/string-similarity.min.js"></script>` to get a specific version (4.0.1) in this case.
+| File                                     | Summary                                                                                                                                                                                                                              |
+| ---                                      | ---                                                                                                                                                                                                                                  |
+| [dependabot.yml](.github/dependabot.yml) | Automates dependency updates for npm and GitHub Actions on the dev branch, ensuring daily checks for package compatibility. Vital for maintaining repository health and keeping dependencies up-to-date without manual intervention. |
 
-This exposes a global variable called `stringSimilarity` which you can start using.
+</details>
 
-```
-<script>
-  stringSimilarity.compareTwoStrings('what!', 'who?');
-</script>
-```
+<details closed><summary>src</summary>
 
-(The package is exposed as UMD, so you can consume it as such)
+| File                     | Summary                                                                                                                                                                                                                    |
+| ---                      | ---                                                                                                                                                                                                                        |
+| [index.js](src/index.js) | Implements string comparison and best match finding, enhancing text-matching functionality for the repository. Key features include comparing strings based on bigrams and determining the best match from target strings. |
+
+</details>
+
+<details closed><summary>.github.workflows</summary>
+
+| File                                                                 | Summary                                                                                                                                                                                                                                     |
+| ---                                                                  | ---                                                                                                                                                                                                                                         |
+| [release.yml](.github/workflows/release.yml)                         | Manages automated version releases via GitHub Actions, triggering on new commits to the main branch. Key features include version number incrementing, package publishing, and release note generation.                                     |
+| [qodana-code-quality.yml](.github/workflows/qodana-code-quality.yml) | Enhances repository quality via automated Qodana code analysis. Monitors sources in src/index.js for adherence to coding standards, promoting better code practices. Streamlines code review process for improved overall codebase quality. |
+| [snyk-security-scan.yml](.github/workflows/snyk-security-scan.yml)   | Implements automated security scans with Snyk in CI pipeline. Enhances repository security by identifying and addressing vulnerabilities early on. Configured as a workflow for seamless integration.                                       |
+| [codecommit-sync.yml](.github/workflows/codecommit-sync.yml)         | Ensures automated synchronization between the code repository and AWS CodeCommit. Implements scheduled sync using GitHub Actions, enhancing collaboration and ensuring code consistency across repositories.                                |
+
+</details>
+
+---
 
 ## API
 
@@ -149,39 +203,70 @@ stringSimilarity.findBestMatch('Olive-green table for sale, in extremely good co
 }
 ```
 
-## Release Notes
+---
 
-### 2.0.0
+##  Project Roadmap
 
-- Removed production dependencies
-- Updated to ES6 (this breaks backward-compatibility for pre-ES6 apps)
+- [X] `► String similarity comparison`
+- [ ] `► Automated dependency updates`
 
-### 3.0.0
+---
 
-- Performance improvement for `compareTwoStrings(..)`: now O(n) instead of O(n^2)
-- The algorithm has been tweaked slightly to disregard spaces and word boundaries. This will change the rating values slightly but not enough to make a significant difference
-- Adding a `bestMatchIndex` to the results for `findBestMatch(..)` to point to the best match in the supplied `targetStrings` array
+##  Contributing
 
-### 3.0.1
+Contributions are welcome! Here are several ways you can contribute:
 
-- Refactoring: removed unused functions; used `substring` instead of `substr`
-- Updated dependencies
+- **[Report Issues](https://local//issues)**: Submit bugs found or log feature requests for the `` project.
+- **[Submit Pull Requests](https://local//blob/main/CONTRIBUTING.md)**: Review open PRs, and submit your own PRs.
+- **[Join the Discussions](https://local//discussions)**: Share your insights, provide feedback, or ask questions.
 
-### 4.0.1
+<details closed>
+<summary>Contributing Guidelines</summary>
 
-- Distributing as an UMD build to be used in browsers.
+1. **Fork the Repository**: Start by forking the project repository to your local account.
+2. **Clone Locally**: Clone the forked repository to your local machine using a git client.
+   ```sh
+   git clone ../
+   ```
+3. **Create a New Branch**: Always work on a new branch, giving it a descriptive name.
+   ```sh
+   git checkout -b new-feature-x
+   ```
+4. **Make Your Changes**: Develop and test your changes locally.
+5. **Commit Your Changes**: Commit with a clear message describing your updates.
+   ```sh
+   git commit -m 'Implemented new feature x.'
+   ```
+6. **Push to local**: Push the changes to your forked repository.
+   ```sh
+   git push origin new-feature-x
+   ```
+7. **Submit a Pull Request**: Create a PR against the original project repository. Clearly describe the changes and their motivations.
+8. **Review**: Once your PR is reviewed and approved, it will be merged into the main branch. Congratulations on your contribution!
+</details>
 
-### 4.0.2
+<details closed>
+<summary>Contributor Graph</summary>
+<br>
+<p align="center">
+   <a href="https://local{//}graphs/contributors">
+      <img src="https://contrib.rocks/image?repo=">
+   </a>
+</p>
+</details>
 
-- Update dependencies to latest versions.
+---
 
-### 4.0.3
+##  License
 
-- Make compatible with IE and ES5. Also, update deps. (see [PR56](https://github.com/aceakash/string-similarity/pull/56))
+This project is protected under the [MIT](https://choosealicense.com/licenses) License. For more details, refer to the [LICENSE](https://choosealicense.com/licenses/) file.
 
-### 4.0.4
+---
 
-- Simplify some conditional statements. Also, update deps. (see [PR50](https://github.com/aceakash/string-similarity/pull/50))
+##  Acknowledgments
 
-![Build status](https://codeship.com/projects/2aa453d0-0959-0134-8a76-4abcb29fe9b4/status?branch=master)
-[![Known Vulnerabilities](https://snyk.io/test/github/aceakash/string-similarity/badge.svg)](https://snyk.io/test/github/aceakash/string-similarity)
+- List any resources, contributors, inspiration, etc. here.
+
+[**Return**](#-overview)
+
+---

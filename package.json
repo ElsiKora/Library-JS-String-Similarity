@@ -43,5 +43,6 @@
 		"prebuild": "rimraf dist",
 		"release": "npm install && npm run build && changeset publish"
 	},
-	"version": "1.0.0"
+	"version": "1.0.0",
+	"type": "commonjs"
 }
