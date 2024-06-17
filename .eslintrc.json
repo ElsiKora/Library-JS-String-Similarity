@@ -1,0 +1,8 @@
+{
+	"env": {
+		"es6": true
+	},
+	"extends": ["@elsikora/eslint-config/typescript", "@elsikora/eslint-config/json", "@elsikora/eslint-config/yml"],
+	"ignorePatterns": [".eslintrc.json"],
+	"root": true
+}
